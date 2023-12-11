@@ -1,0 +1,96 @@
+body {
+    background: #f6f5f7;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    overflow: hidden;
+}
+
+#updateP {
+    border-color: #92e967;
+    background-color: #92e967;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+#updateP:active {
+    transform: scale(0.95);
+}
+
+#updateP:focus {
+    outline: none;
+}
+
+.btn-default {
+    border-color: #FFFFFF;
+    background-color: transparent;
+    color: #020202;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.form-group label {
+    color: #4E5155;
+    font-weight: bold;
+}
+
+.form-control {
+    background-color: #eee;
+    border: none;
+    padding: 8px 10px;
+    margin: 4px 0;
+    width: 100%;
+}
+
+.text-right {
+    margin-top: 1rem;
+}
+
+.container.light-style {
+    background: #f6f5f7;
+    max-width: 600px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; 
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 10px;
+}
+
+hr.border-light {
+    border-color: rgba(24, 28, 33, 0.1);
+}
+
+.card.overflow-hidden {
+    border-color: rgba(24, 28, 33, 0.1);
+}
+
+.card-body.media.align-items-center {
+    padding: 10px; /* Adjust the padding as needed */
+}
+
+.media-body {
+    max-width: 300px; /* Adjust the maximum width as needed */
+}
+
+.btn-outline-primary {
+    margin-bottom: 5px; /* Add some spacing between the button and the text */
+}
+
+.text-light.small {
+    font-size: 12px; /* Adjust the font size for a smaller text */
+}
+
+.account-settings-fileinput {
+    display: none; /* Hide the file input */
+}

@@ -1,19 +1,27 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "swiss_collection";
+class config
+{
+    private static $pdo = null;
 
-try {
-
-    $conn = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // set the PDO error mode to exception
-    
-    
-} catch(PDOException $e) {
-
-    echo "Connection Failed" .$e->getMessage();
+    public static function getConnexion()
+    {
+        if (!isset(self::$pdo)) {
+            try {
+                self::$pdo = new PDO(
+                    'mysql:host=localhost;dbname=swiss_collection',
+                    'root',
+                    '',
+                    [
+                        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+                        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+                    ]
+                );
+                //echo "connected successfully";
+            } catch (Exception $e) {
+                die('Erreur: ' . $e->getMessage());
+            }
+        }
+        return self::$pdo;
+    }
 }
-
-?>
